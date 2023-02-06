@@ -1,0 +1,23 @@
+@startuml
+Object CatedralDeSantiago{
+Nombre = "Catedral de Santiago de Compostela"
+Culto = Católico
+Fecha inicio construccion = 1075
+Fecha fin construccion = 1122
+Fecha inicio consagracion = 1128
+Fecha fin consagracion = 1168
+Fecha inicio segunda etapa construccion = 1211
+Fecha fin segunda etapa construccion = 1869
+Material = Granito
+Estilo = Románico, Gótico, Barroco, Plateresco, Neoclásico
+}
+
+Object l1{
+Ciudad = "Santiago de Compostela"
+Comunidad = "Galicia"
+Pais = "España"
+}
+
+CatedralDeSantiago <|-- l1 : Se encuentra en
+
+@enduml
