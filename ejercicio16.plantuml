@@ -1,4 +1,4 @@
-@startuml 
+@startuml ejercicio16
 Class Persona {
 Nombre: 1 Texto
 Primer apellido: 1 Texto
