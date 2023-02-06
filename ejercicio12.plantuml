@@ -1,0 +1,8 @@
+@startuml ejercicio12
+Class Estructura{
+Código: 1 Texto
+Datación: 0..1 Texto
+Materiales: 1...* enum Material
+}
+Estructura "0..1 Estructura marco" o-- "0..* Sub-Estructura" Estructura
+@enduml

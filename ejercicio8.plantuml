@@ -1,0 +1,13 @@
+@startuml ejercicio8
+Class Actuación{
+Fecha de inicio: 1 Tiempo
+Fecha de fin: 0..1 Tiempo
+Tipo: 1 enum Tipo de Actuación
+}
+
+enum Tipo_de_Actuación {
+Sondeo
+Excavación
+Seguimiento
+}
+@enduml
