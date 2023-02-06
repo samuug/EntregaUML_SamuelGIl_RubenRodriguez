@@ -1,4 +1,4 @@
-@startuml
+@startuml ejercicio4
 Object CatedralDeSantiago{
 Nombre = "Catedral de Santiago de Compostela"
 Culto = Católico
