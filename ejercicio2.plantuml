@@ -1,0 +1,32 @@
+@startuml ejercicio2
+Class KatePersona {
+Nombre = "Kate"
+Apellido="Windsor"
+Nacimiento="Middlestone"
+Sexo="Mujer"
+}
+
+Class GuillermoPersona {
+Nombre = "Guillermo"
+Apellido="Windsor"
+Sexo="Hombre"
+}
+
+Class DianaPersona {
+Nombre = "Diana"
+Apellido="Windsor"
+Nacimiento="Spencer"
+Sexo="Mujer"
+}
+
+Class CarlosPersona {
+Nombre = "Carlos"
+Apellido="Windsor"
+Sexo="Hombre"
+}
+
+KatePersona -- GuillermoPersona : Está casado con
+DianaPersona -- GuillermoPersona : Es hijo de
+CarlosPersona -- GuillermoPersona : Es hijo de
+DianaPersona -- CarlosPersona : Está casado con
+@enduml
