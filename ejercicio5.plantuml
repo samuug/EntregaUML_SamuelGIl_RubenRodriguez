@@ -1,0 +1,25 @@
+@startuml ejercicio5
+
+Class Circulo{
+  Color: 1 Texto
+  Diametro: 1 Numero
+}
+
+Class Rectangulo {
+  Longitud: 1 Numero
+  Anchura: 1 Numero
+  Color: 1 Texto
+}
+
+Class Cuadrado {
+  Longitud: 1 Numero
+  Color: 1 Texto
+}
+
+Class Elipse {
+  Color: 1 Texto
+  Eje Mayor: 1 Numero
+  Eje Menor: 1 Numero
+}
+
+@enduml

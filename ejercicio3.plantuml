@@ -32,8 +32,8 @@ object Replica{
   estado de conservacion:"Bueno"
 }
 
-L1<|-- Gioconda:"Se encuentra en"
-L2<|-- Replica:"Se encuentra en"
+L1 -- Gioconda:"Se encuentra en" <
+L2 -- Replica:"Se encuentra en" <
 
 Gioconda -- Replica:"Es replica de"
 

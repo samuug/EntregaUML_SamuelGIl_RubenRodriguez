@@ -1,0 +1,43 @@
+@startuml ejercicio9
+
+Class Cuadro{
+    Titulo: 0..* Texto 
+    Cronologia: 1 Tiempo
+    Tecnica: 1 enum Tecnica
+    Sub-tecnica: 1 enum Sub-Tecnica
+    Material del soporte: 1 enum Material
+    Autor: 1 Texto
+    Estado de conservacion: 1 enum Estado de conservacion
+}
+
+enum Tecnica{
+    Acuarela
+    Oleo
+    Pastel
+    Fresco
+}
+
+enum Sub-Tecnica{
+    Sfumato
+    Pincelada simple
+    Collage
+    Veladura
+}
+
+enum Material{
+    Madera
+        Alamo
+        Nogal
+    Lienzo
+    Obra
+}
+
+enum EstadoDeConservacion{
+    Excelente
+    Bueno
+    Regular
+    Malo
+    Destruido
+}
+
+@enduml

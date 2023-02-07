@@ -24,13 +24,11 @@ Class Libro{
  Idioma: 1..* enum Idioma
 }
 
-
 Class Ejemplar{
  Codigo: 1 texto
  Editorial: 1 Texto
  Año de adquisicion: 1 Tiempo
 }
-
 
 Class Prestamo{
  Fecha de inicio: 1 Texto
@@ -48,9 +46,6 @@ Class Empleado{
  Nombre: 1 Texto
  Codigo: 1 Texto
 }
-
-
-
 
 Planta "1..*" --o "1" Biblioteca 
 Planta "1" -- "1..*" Tematica : Alberga >

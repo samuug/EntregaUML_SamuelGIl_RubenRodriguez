@@ -1,0 +1,46 @@
+@startuml ejercicio15
+
+Class Poligono{
+}
+
+Class Punto{
+ X: 1 Numero
+ Y: 1 Numero
+}
+
+Poligono "1..*" o-- "3..*^" Punto : Posee >
+
+Object t1{
+}
+
+Object t2{
+}
+
+Object pt1{
+  X: -10
+  Y: 10
+}
+
+Object pt2{
+  X: 10
+  Y: 10
+}
+
+Object pt3{
+  X:-10
+  Y:-10
+}
+
+Object pt5{
+  X: 10
+  Y: 10
+}
+
+t1 o-- pt1 : Posee >
+t1 o-- pt2 : Posee >
+t1 o-- pt3 : Posee >
+t2 o-- pt1 : Posee >
+t2 o-- pt5 : Posee >
+t2 o-- pt3 : Posee >
+
+@enduml

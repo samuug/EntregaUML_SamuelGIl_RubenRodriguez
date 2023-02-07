@@ -1,0 +1,49 @@
+@startuml ejercicio14
+
+class pol1{
+}
+
+class pol2{
+}
+
+class pt1{
+  X: -10
+  Y: 10
+}
+
+class pt2{
+  X: 10
+  Y: 10
+}
+
+class pt3{
+  X: -10
+  Y: -10
+}
+
+class pt4{
+  X: 10
+  Y: -10
+}
+
+class pt5{
+  X= 10
+  Y= 10
+}
+
+class pt6{
+  X= -10
+  Y= 10
+
+}
+
+pol1 o-- pt1  : Posee >
+pol1 o-- pt2  : Posee >
+pol1 o-- pt3  : Posee >
+
+pol2 o-- pt4  : Posee >
+pol2 o-- pt5 : Posee >
+pol2 o-- pt6 : Posee >
+
+
+@enduml
