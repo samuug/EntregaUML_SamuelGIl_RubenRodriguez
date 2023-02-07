@@ -1,0 +1,21 @@
+@startuml ejercicio21
+Class EntidadGeografica{
+  Código: 1 Texto
+  Nombre: 1 Texto
+}
+
+Class Linea{
+}
+Class Area{
+}
+Class Punto{
+}
+
+EntidadGeografica <|-- Linea
+EntidadGeografica <|-- Area
+EntidadGeografica <|-- Punto
+
+Linea "0..*" o--"2..*" Punto
+Area "0..*" o-- "3..*" Punto
+
+@enduml

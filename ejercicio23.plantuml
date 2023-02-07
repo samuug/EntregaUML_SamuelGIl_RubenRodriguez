@@ -1,0 +1,15 @@
+@startuml ejercicio23
+
+Class Construccion{
+}
+
+Class Edificio extends Construccion{
+}
+
+Class ConjuntoConstruido extends Construccion{
+}
+
+ConjuntoConstruido "0..1" o-- "0..*" Construccion
+
+
+@enduml
