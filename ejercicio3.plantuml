@@ -1,4 +1,4 @@
-@startuml
+@startuml ejercicio3
 
 object L1{
   institucion:"Museo del louvre"

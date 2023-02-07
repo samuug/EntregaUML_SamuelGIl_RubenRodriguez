@@ -1,0 +1,64 @@
+@startuml ejercicio17
+
+Class Biblioteca{
+ Nombre: 1 Texto
+ Direccion: 1 Texto 
+ Telefono: 1..* Texto
+ Numero de empleados: 1 Numero 
+ Año de apertura: 1 Tiempo
+}
+
+Class Planta{
+ Numero: 1 Numero
+ Capacidad: 1 Numero
+}
+
+Class Tematica{ 
+ Nombre: 1 Texto
+}
+
+Class Libro{
+ ISBN: 1 Texto
+ Titulo: 1 Texto
+ Año de publicacion: 1 Tiempo
+ Idioma: 1..* enum Idioma
+}
+
+
+Class Ejemplar{
+ Codigo: 1 texto
+ Editorial: 1 Texto
+ Año de adquisicion: 1 Tiempo
+}
+
+
+Class Prestamo{
+ Fecha de inicio: 1 Texto
+ Fecha estipulada de devolucion: 1 Tiempo
+ Fecha real de devolucion:0..1 Tiempo
+}
+
+Class Lector{
+ Nombre: 1 Texto
+ Numero de identificacion: 1 Texto
+ Direccion: 1 Texto
+}
+
+Class Empleado{
+ Nombre: 1 Texto
+ Codigo: 1 Texto
+}
+
+
+
+
+Planta "1..*" --o "1" Biblioteca 
+Planta "1" -- "1..*" Tematica : Alberga >
+Libro "0..*" -- "1..*" Tematica :Pertenece a > 
+Ejemplar "1..*" --o "1" Libro 
+Prestamo "0..*" -- "1" Ejemplar : Involucra >
+Lector "0..1" -- "0..*" Prestamo : Hecho A <
+Empleado "0..1" -- "0..*" Prestamo : Hecho A <
+
+
+@enduml

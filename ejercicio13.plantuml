@@ -1,0 +1,33 @@
+@startuml ejercicio13
+
+object pt1{
+  x:-10
+  y:10
+}
+
+object pt2{
+  x:10
+  y:10
+}
+
+object pol1{
+
+}
+
+object pt3{
+  x:-10
+  y:-10
+}
+
+object pt4{
+  x:10
+  y:-10
+}
+
+pol1 o-- pt1  :posee >
+pol1 o-- pt2  :posee >
+pol1 o-- pt3  :posee >
+pol1 o-- pt4  :posee >
+
+
+@enduml
