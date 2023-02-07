@@ -1,0 +1,18 @@
+@startuml
+Class Persona
+Class Rol
+Class Responsable
+Class Técnico
+Class Intervención
+Class Proyecto
+Class Actuación
+
+Persona "1" -- "0..*" Rol : Desempeña
+Rol <|-- Responsable
+Rol <|-- Técnico
+Técnico "0..* Participante" -- "1" Intervención : Participa en
+Intervención <|-- Actuación
+Intervención <|-- Proyecto
+Actuación "0..*" o-- "1" Proyecto
+Responsable "1 Director" -- "1" Proyecto : Dirige
+@enduml
