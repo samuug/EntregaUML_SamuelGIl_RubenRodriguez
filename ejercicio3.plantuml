@@ -1,0 +1,41 @@
+@startuml
+
+object L1{
+  institucion:"Museo del louvre"
+  ciudad:"Paris"
+  pais:"Francia"
+}
+
+object Gioconda{
+  titulo:"La Gioconda"
+  añoCreacion:"1503-1516"
+  tecnica:Óleo
+  subtecnica:Sfumato
+  soporte:Madera de álamo
+  autor:"Leonardo da Vinci"
+  estadoConservacion:"Regular"
+}
+
+object L2{
+  institucion:"Museo de El Prado"
+  ciudad:"España"
+  pais:"Madrid"
+}
+
+object Replica{
+  titulo:"Gioconda del Prado"
+  añoCreacion:"1503-1516"
+  tecnica:Óleo
+  subtecnica:Pincelada simple
+  soporte:Madera de nogal
+  autor:"Desconocido"
+  estado de conservacion:"Bueno"
+}
+
+L1<|-- Gioconda:"Se encuentra en"
+L2<|-- Replica:"Se encuentra en"
+
+Gioconda -- Replica:"Es replica de"
+
+
+@enduml
