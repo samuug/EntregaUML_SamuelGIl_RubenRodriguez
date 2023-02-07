@@ -1,0 +1,63 @@
+@startuml ejercicio19
+
+
+Class Restauracion{
+  Fecha: 1 Tiempo
+  Descripcion: 1 Texto
+  Tecnica: 1..* enum TecnicaRestauracion
+}
+
+Class Objeto{
+  Codigo: 1..* Numero
+  Nombre: 1 Texto
+  Autor: 1 Texto
+  Fecha de creacion: 1 Tiempo
+  Descripcion: 0..1 Texto
+  Origen: 1 enum Lugar
+  Estado: 1 enum Estado
+  Tematica: 1..* enum Tematica
+} 
+
+Class Coleccion{
+  Nombre: 1 Texto
+  Descripcion: 1 Texto
+} 
+
+Class ColeccionTemporal extends Coleccion{
+  Fecha de inicio: 1 Tiempo
+  Fecha de fin: 1 Tiempo
+}
+
+Class Ubicacion{
+  Codigo: 1 Texto
+}
+
+Class Sala{
+  Nombre: 1 Texto
+  Esta abierta al publico: 1 Booleano
+}
+
+Class Almacen{
+  Nombre: 1 Texto
+}
+
+Class Planta{
+  Numero: 1 Numero
+}
+
+Class Edificio{
+  Nombre: 1 Texto
+  Direccion: 1 Texto
+}
+
+
+Restauracion "0..*" -- "1..*" Objeto : Se ha relizado sobre >
+Coleccion "0..1" -- "1..*" Objeto : Pertenece a <
+
+Ubicacion "1" -- "0..*" Objeto : Se ubica en <
+Ubicacion "1" <|-- "0..*" Sala
+Ubicacion "1" <|-- "0..*" Almacen 
+Planta "1" o-- "0..*" Sala 
+Edificio "1" o-- "1..*" Planta
+
+@enduml
