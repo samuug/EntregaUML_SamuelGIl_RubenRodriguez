@@ -1,32 +1,11 @@
 @startuml ejercicio13
-
-Object pol1{
+Class Poligono{
 }
 
-Object pt1{
-  x:-10
-  y:10
+Class Punto{
+  X: 1 Numero
+  Y: 1 Numero
 }
 
-Object pt2{
-  x:10
-  y:10
-}
-
-Object pt3{
-  x:-10
-  y:-10
-}
-
-Object pt4{
-  x:10
-  y:-10
-}
-
-pt1 --o pol1  :posee <
-pt2 --o pol1  :posee <
-pt3 --o pol1  :posee <
-pt4 --o pol1  :posee <
-
-
+Poligono "1" o--"3..*" Punto : Posee >
 @enduml
