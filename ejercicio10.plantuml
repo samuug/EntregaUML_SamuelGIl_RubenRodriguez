@@ -1,0 +1,23 @@
+@startuml ejercicio10
+
+Class Proyecto{
+Nombre: 1 Texto
+Fecha de inicio: 1 Tiempo
+Fecha de fin: 0..1 Tiempo
+}
+
+Class Persona{
+Nombre: 1 Texto
+Apellidos: 1 Texto
+Rol: 0..* Texto
+}
+
+Class Lugar{
+Nombre: 0..*
+Coordenada X: 1 Numero
+Coordenada Y: 1 Numero
+}
+
+Persona "1..* Miembro del Equipo" -- "0..*" Proyecto : Participa en
+Proyecto "0..*" -- "0..* Lugar de Actuación" Lugar : Tiene lugar en
+@enduml

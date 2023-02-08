@@ -1,0 +1,40 @@
+@startuml ejercicio22
+Class Ciudad {
+Nombre: 1 Texto
+Provincia: 1 Texto
+País: 1 Texto
+}
+
+Class EspacioAbierto{
+Nombre: 1..* Texto
+}
+
+Class Calle{
+Longitud: 1 Numero
+}
+
+Class Plaza{
+Superficie: 1 Numero
+}
+
+Class Edificio{
+Numero: 1 Texto
+}
+
+Class ElementoEstructural{
+Tipo: 1 enum TipoElemento
+}
+
+enum TipoElemento{
+Portada
+Puerta
+Ventana
+Balcon
+}
+
+Ciudad "1" o-- "0..*" EspacioAbierto
+EspacioAbierto <|-- Calle
+EspacioAbierto <|-- Plaza
+EspacioAbierto "1" o-- "0..*" Edificio
+Edificio "1" o-- "0..*" ElementoEstructural
+@enduml
