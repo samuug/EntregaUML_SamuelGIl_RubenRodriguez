@@ -1,0 +1,37 @@
+@startuml ejercicio27
+
+Class EntidadArqueologica{
+    Cronologia: 1 Tiempo
+}
+
+Class Lugar{
+    Nombre: 1 Texto
+    Provincia: 1 Texto
+    Pais: 1 Texto
+}
+
+Class SitioArqueologico extends EntidadArqueologica{
+    Tipo: 1 enum TipoSitio
+}
+
+Class ConjuntoArqueologico extends EntidadArqueologica{
+
+}
+
+Class Dimension{
+    Nombre: 1 Texto
+    Medida: 1 Numero
+    Unidad: 1 Texto
+}
+
+enum TipoSitio{
+    Asentamiento
+    Enterramiento
+    Area de Explotacion
+}
+
+EntidadArqueologica "1" -- "0..*" Lugar : Se localiza en >
+EntidadArqueologica "1..*" --o "0..*" ConjuntoArqueologico
+EntidadArqueologica "1" o-- "0..*" Dimension : Mide >
+
+@enduml

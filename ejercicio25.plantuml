@@ -1,0 +1,24 @@
+@startuml ejercicio25
+
+Class Libro {
+    Cantidad de paginas: 1 Numero
+    Tipo de impresion: 1 enum TipoImpresion
+    Tecnica de encuadernacion: 1 enum TecnicaEncuadernacion
+}
+
+enum TipoImpresion{
+    Manuscrito
+    Impreso
+}
+
+enum TecnicaEncuadernacion{
+    Cosido
+    Encuadernacion
+}
+
+
+Class Muestra{
+    Fraccion del total: 1 Numero
+    Metodo de extraccion: 1 Texto
+}
+@enduml

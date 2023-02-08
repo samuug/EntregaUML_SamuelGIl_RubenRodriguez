@@ -1,0 +1,32 @@
+@startuml ejercicio18
+
+Class Forma{
+    Color:1 Texto
+}
+
+Class Cuadrilatero extends Forma{
+    Longitud: 1 Numero
+}
+
+Class Rectangulo extends Cuadrilatero{
+    Anchura: 1 Numero
+}
+
+Class Cuadrado extends Cuadrilatero{
+
+}
+
+Class Conica extends Forma{
+
+}
+
+Class Circulo extends Conica{
+    Diametro: 1 Numero
+}
+
+Class Elipse extends Conica{
+    Eje Mayor: 1 Numero
+    Eje Menor: 1 Numero
+}
+
+@enduml

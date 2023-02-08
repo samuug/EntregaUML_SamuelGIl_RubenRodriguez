@@ -1,4 +1,4 @@
-@startuml
+@startuml ejercicio20
 Class Persona
 Class Rol
 Class Responsable

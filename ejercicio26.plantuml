@@ -1,0 +1,72 @@
+@startuml ejercicio26
+
+Class Iglesia{
+    Nombre: 1 Texto
+    Direccion: 0..1 Texto
+}
+
+Class IglesiaRural extends Iglesia{
+
+}
+
+Class IglesiaMonacal extends Iglesia{
+    Orden: 1 Texto
+}
+
+Class Abside{
+    Forma: 1 enum FormaAbside
+}
+
+Class Nave{
+    Superficie: 1 Numero
+}
+
+Class Ventana{
+    Descripcion: 1 Texto
+    Anchura: 1 Numero
+    Altura: 1 Numero
+}
+
+Class VentanaSimple extends Ventana{
+    Tiene arco doble: 1 Booleano
+    Esta decorada: 1 Booleano
+    Tecnica de cierre: 1 enum TecnicaCierreSimple
+}
+Class VentanaCompleja extends Ventana{
+    Tecnica de cierre: 1 enum TecnicaCierreCompleja
+}
+
+Class Crucero{
+    Tipo: 1 enum TipoCrucero
+}
+
+enum TecnicaCierreSimple{
+    Tela encerrada
+    Tela impreganada
+}
+
+enum TecnicaCierreComplejo{
+    Vidriera incolora
+    Vidriera coloreada
+}
+
+enum FormaAbside{
+    Semicircular
+    En corona
+}
+
+enum TipoCrucero{
+    Sin brazos salientes
+    Con brazos salientes
+}
+
+IglesiaRural "1" o-- "0..*" VentanaSimple
+IglesiaRural "0..1" o-- "1" Nave
+IglesiaRural "0..1" o-- "1" Abside
+
+IglesiaMonacal "1" o-- "1" Crucero
+IglesiaMonacal "1" o-- "1..*" VentanaCompleja
+IglesiaMonacal "0..1" o-- "3..5" Nave
+IglesiaMonacal "0..1" o-- "3..5" Abside 
+
+@enduml
