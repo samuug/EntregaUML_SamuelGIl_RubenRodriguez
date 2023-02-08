@@ -1,0 +1,19 @@
+@startuml ejercicio24
+Class Edificio{}
+
+Class UsoEdificio{
+Fecha de inicio: 1 Tiempo
+Fecha de fin; 0..1 Tiempo
+}
+
+Class Hospital{}
+
+Class Escuela{}
+
+Class Vivienda{}
+
+Edificio "1" o-- "0..*" UsoEdificio
+UsoEdificio <|-- Hospital
+UsoEdificio <|-- Escuela
+UsoEdificio <|-- Vivienda
+@enduml
