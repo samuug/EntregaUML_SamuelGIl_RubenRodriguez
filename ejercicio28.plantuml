@@ -1,0 +1,34 @@
+@startuml ejercicio28
+
+Class ObjetoArqueologico{
+    Codigo:1 Texto
+    Datacion: 0..1 Tiempo
+    Dimensiones: ?
+    Descripcion: 1 Texto
+    Material: 1..* enum Material
+}
+
+Class Excavacion{
+    Fecha de inicio: 1 Tiempo
+    Fecha de fin: 0..1 Tiempo
+}
+
+Class SitioArqueologico{
+    
+}
+
+Class FragmentoDeObjeto extends ObjetoArqueologico{
+
+}
+
+Class ObjetoCompleto extends ObjetoArqueologico{
+    Uso: 1..* enum Uso
+}
+
+
+ObjetoArqueologico "0..*" -- "0..*" ObjetoArqueologico: Es similar a >
+ObjetoArqueologico "0..*" --o "0..1" ObjetoCompleto
+ObjetoArqueologico "0..*" -- "1" Excavacion: Aparecio durante >
+Excavacion "0..*" -- "1" SitioArqueologico : Tiene lugar sobre >
+
+@enduml

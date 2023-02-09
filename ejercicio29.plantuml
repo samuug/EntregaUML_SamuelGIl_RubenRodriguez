@@ -1,0 +1,44 @@
+@startuml ejercicio29
+
+Class Persona{
+    Nombre dado: 1 Texto
+    Nombre de familia: 1 Texto
+    Sexo: 1 enum Sexo
+    Fecha de nacimiento: 1 Tiempo
+    Lugar de nacimiento: 1 Texto
+    Fecha de defuncion: 0..1 Tiempo
+    Lugar de defuncion: 0..1 Texto
+}
+
+Class Documento{
+    Titulo: 1 Texto
+    Tipo: 1 enum TipoDocumento
+    Fecha de publicacion: 0..1 Tiempo
+}
+
+Class Ocupacion{
+    Nombre: 1 Texto
+    Desde: 1 Tiempo
+    Hasta: 0..1 Tiempo
+}
+
+Class Evento{
+    Nombre: 1 Texto
+    Momento de celebracion: 1 Tiempo
+    Descripcion: 0..1 Texto
+}
+
+Class Lugar{
+    Nombre: 0..* Texto
+    Direccion: 0..1 Texto
+    Pais: 1 Texto
+}
+
+
+Persona "0..*" -- "0..*" Persona : Contacta con >
+Persona "0..*" -- "0..1" Lugar : Visita >
+Persona "0..*" -- "0..*" Evento: Lee >
+Persona "1" -- "0..*" Ocupacion: Desmepeña >
+
+
+@enduml
